@@ -39,7 +39,7 @@
     <link href="css/ios-dist.css" type="text/css" rel="stylesheet" />
     <script src="js/dropzone.min.js"></script>
 </head>
-<body class="<? if (!empty($_GET['view'])) { ?>view<? } ?>">
+<body class="<? if (!empty($_GET['view'])) { ?>view<? } else { ?>upload<? }?>">
 
 <div id="main">
     <header>

@@ -36,7 +36,7 @@ $(function() {
     }
 
 
-    if(!$('body').hasClass('view')) {
+    if($('body').hasClass('upload')) {
 
         var myDropzone = new Dropzone("#dropzone", {
             url: 'upload.php',
