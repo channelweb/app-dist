@@ -1,0 +1,197 @@
+@charset "utf-8";
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+IOS-dist CSS
+ChannelWeb srl / BEdita
+http://www.channelweb.it 2015
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-size: 1em;
+    margin: 2em;
+}
+
+header {
+    margin: 0 0 2em;
+}
+header h1 {
+    font-size: 2em;
+}
+header h2 {
+    font-size: 1em;
+}
+
+footer {
+    margin-top: 2em;
+}
+footer img {
+    width: 20px;
+    margin-right: .5em;
+    display: inline-block;
+    top: .2em;
+    position: relative;
+}
+footer a {
+    font-size: .75em;
+    color: #aaa;
+    text-decoration: none;
+}
+
+
+
+
+article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+
+    box-sizing: border-box;
+    max-width: 640px;
+    padding: 1em;
+    background-color: #f3f3f3;
+    margin: 1px 0;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+}
+
+article:not(:first-child) {
+    display: none;
+    padding: 0;
+    height: 0;
+}
+body.view article:not(:first-child) {
+    display: flex;
+    padding: 1em;
+    height: auto;
+}
+
+
+article h2 {
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -ms-transform-origin: left center;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    font-size: .75em;
+    color: #aaa;
+}
+
+
+
+a.delete-btn {
+    display: none;
+    position: absolute;
+    top: -2em;
+    right: 0;
+    padding: 0 1em;
+    background-color: #444;
+    color: #eee;
+    line-height: 2em;
+    text-decoration: none;
+    font-size: .75em;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+section a:hover {
+    background-color: #b00;
+    color: #fff;
+}
+
+.dropzone input {
+    display: none;
+    border: 0;
+    font-size: .75em;
+    padding: 1em;
+    width: 80%;
+    text-align: center;
+    background-color: transparent;
+}
+.dropzone label {
+    display: none;
+    font-size: 1.5em;
+}
+.dropzone p {
+    margin-top: .5em;
+    font-size: .75em;
+    color: #666;
+}
+
+body.view .dropzone .delete-btn,
+body.view .dropzone label,
+body.view .dropzone p,
+body.view .dropzone input
+{ display: block; }
+
+.dropzone img.qr { display: none; margin-top: .5em; }
+
+
+#ipa-devices ul {
+    list-style: none;
+    font-family: monospace;
+}
+#ipa-devices li {
+    padding-top: .5em;
+}
+
+#ipa-url a {
+    display: block;
+    padding: 1.5em 3em;
+    background-color: #444;
+    border-radius: .5em;
+    color: #eee;
+    text-decoration: none;
+}
+
+.ipa-list ul {
+    list-style: none;
+    font-family: monospace;
+    max-width: 640px;
+}
+.ipa-list li {
+    margin-top: 1em;
+}
+.ipa-list li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: .5em 1em;
+    background-color: #ddd;
+}
+.ipa-list li a:hover {
+    background-color: #b00;
+    color: #fff;
+}
+
+
+
+/* dropzone */
+.dropzone {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 0;
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: visible;
+}
+.dz-remove {
+    margin-top: .5em;
+    text-decoration: none;
+    color: #800;
+}
+.dropzone .dz-preview .dz-progress {
+    top: 72%;
+}
+
+
