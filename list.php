@@ -31,7 +31,7 @@
             if(!empty($ipaList)) {
                 foreach ($ipaList as $ipa) {
                     $dir = pathinfo($ipa, PATHINFO_BASENAME);
-                    $url = $base . '/?view=' . $dir;
+                    $url = $base . '?view=' . $dir;
 
                     echo '<li><a href="' . $url . '">' . pathinfo($ipa, PATHINFO_BASENAME);
                     echo ' – ' . date('j M Y G:i:s', $dir);
