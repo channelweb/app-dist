@@ -66,7 +66,6 @@ class IpaTools {
 		} else {
 			$this->basedir = dirname($_SERVER['REQUEST_URI']);
 			$this->applink = $this->applink . $this->baseurl . $this->basedir . "/" . basename ( $this->folder ) . "/manifest.plist";
-			echo $this->applink; exit;
 		}
     }
 
