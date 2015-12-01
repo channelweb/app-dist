@@ -64,7 +64,9 @@ class IpaTools {
 			$this->extractPlist($ipa);
 			$this->createManifest($ipa);
 		} else {
-			$this->applink = $this->applink . $this->baseurl . $this->basedir . $this->folder . "/manifest.plist";
+			$this->basedir = dirname($_SERVER['REQUEST_URI']);
+			$this->applink = $this->applink . $this->baseurl . $this->basedir . "/" . basename ( $this->folder ) . "/manifest.plist";
+			echo $this->applink; exit;
 		}
     }
 
