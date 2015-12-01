@@ -63,6 +63,8 @@ class IpaTools {
 		if (empty($view)) {
 			$this->extractPlist($ipa);
 			$this->createManifest($ipa);
+		} else {
+			$this->applink = $this->applink . $this->baseurl . $this->basedir . $this->folder . "/manifest.plist";
 		}
     }
 
