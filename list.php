@@ -34,7 +34,7 @@
                     $url = $base . '?view=' . $dir;
 
                     echo '<li><a href="' . $url . '">' . pathinfo($ipa, PATHINFO_BASENAME);
-                    echo ' – ' . date('j M Y G:i:s', $dir);
+                    echo ' – ' . date('j M Y H:i:s', $dir);
 
                     $ipaPath = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'files' . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR;
                     $files = glob($ipaPath . '*.ipa');
