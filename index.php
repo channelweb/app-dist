@@ -68,7 +68,7 @@
     </section>
 
     <footer>
-        <img src="img/cwlogo.svg"><a href="http://www.channelweb.it" target="_blank">2015 | ChannelWeb</a>
+        <img src="img/cwlogo.svg"><a href="http://www.channelweb.it" target="_blank">2015 ChannelWeb</a>
     </footer>
 </div>
 
