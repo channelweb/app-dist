@@ -1,2 +1,4 @@
 /_REMOVE/
 /files/*
+/.project
+/.buildpath
