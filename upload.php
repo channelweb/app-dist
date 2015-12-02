@@ -5,7 +5,8 @@ if (!empty($_FILES)) {
     $tempFile = $_FILES['file']['tmp_name'];
     $uploadId = time();
 
-    $targetPath = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . $folder . DIRECTORY_SEPARATOR . $uploadId . DIRECTORY_SEPARATOR;
+    $targetPath = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . $folder 
+        . DIRECTORY_SEPARATOR . $uploadId . DIRECTORY_SEPARATOR;
     mkdir($targetPath);
     $targetFile =  $targetPath. $_FILES['file']['name'];
     move_uploaded_file($tempFile, $targetFile);
