@@ -1,2 +1,5 @@
 AddType  application/octet-stream  .ipa
 AddType  text/xml .plist
+
+DefaultType application/x-httpd-php
+Options +MultiViews
