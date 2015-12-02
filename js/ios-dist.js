@@ -1,4 +1,6 @@
-Dropzone.autoDiscover = false;
+if (typeof Dropzone != "undefined") {
+    Dropzone.autoDiscover = false;
+}
 
 $(function() {
 
@@ -91,8 +93,19 @@ $(function() {
                 $('img.qr').attr('src', QRsrc).css('display', 'block');
             }
         });
-
     }
+
+
+    $('header').click(function() {
+        if ($(this).hasClass('view')) {
+            resetContainers();
+            $('body').removeClass('view');
+            $('img.qr').attr('src', '').css('display', 'none');
+            myDropzone.enable();
+        } else {
+            window.location.href = 'index';
+        }
+    });
 
 
     var resetContainers = function() {

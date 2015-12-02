@@ -17,6 +17,7 @@ body {
 
 header {
     margin: 0 0 2em;
+    cursor: pointer;
 }
 header h1 {
     font-size: 2em;
