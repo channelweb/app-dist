@@ -114,7 +114,6 @@ class IpaTools {
 			$this->appname = $plistArray['CFBundleDisplayName'];
 			$this->icon = ($plistArray['CFBundleIconFile']!=""?$plistArray['CFBundleIconFile']:(count($plistArray['CFBundleIconFile'])>0?$plistArray['CFBundleIconFile'][0]:null));
 			
-			
 			$manifest = '<?xml version="1.0" encoding="UTF-8"?>
 			<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 			<plist version="1.0">
@@ -128,7 +127,7 @@ class IpaTools {
 								<key>kind</key>
 								<string>software-package</string>
 								<key>url</key>
-								<string>'.$this->baseurl.$this->basedir.$ipa.'</string>
+								<string>' . $this->baseurl . $this->basedir . 'files/' . basename($this->folder) . '/' . basename($ipa). '</string>
 							</dict>
 							'.(file_exists($this->folder.'/itunes.png')?'<dict>
 								<key>kind</key>
