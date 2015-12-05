@@ -1,6 +1,6 @@
-<?
+<?php
 
-if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
+if (!empty($_GET['id'])) {
     $folder = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'files' 
         . DIRECTORY_SEPARATOR . $_GET['id'];
 
@@ -14,4 +14,4 @@ if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
 
 }
 
-header('Location:' . dirname($_SERVER['REQUEST_URI']));
+header('Location: ' . 'list.php');

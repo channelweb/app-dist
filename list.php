@@ -6,7 +6,7 @@
  `-' '-`-`-' '' '`'-'-'  '`'-`-'
 
 -->
-<?
+<?php
     $base = dirname($_SERVER['REQUEST_URI']);
     $path = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'files' . DIRECTORY_SEPARATOR;
     $ipaList = glob($path . '*', GLOB_ONLYDIR);
@@ -27,14 +27,14 @@
     </header>
 
     <section>
-    <ul><?
+    <ul><?php
             if (!empty($ipaList)) {
                 foreach ($ipaList as $ipa) {
                     $dir = pathinfo($ipa, PATHINFO_BASENAME);
-                    $url = $base . '?view=' . $dir;
+                    $url = $base . '/view.php?p=' . $dir;
 
                     echo '<li><a href="' . $url . '">' . pathinfo($ipa, PATHINFO_BASENAME);
-                    echo ' – ' . date('j M Y H:i:s', $dir);
+//                    echo ' – ' . date('j M Y H:i:s', $dir);
 
                     $ipaPath = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'files' 
                         . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR;
@@ -44,7 +44,7 @@
                         echo ' – ' . $ipaInfo['basename'];
                     }
 
-                    echo '</a></li>';
+                    echo '</a><a href="delete.php?id=' . $dir . '" >delete</a></li>';
                 }
             }
         ?></ul>

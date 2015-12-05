@@ -70,6 +70,13 @@ $(function() {
                 // disable dropzone
                 myDropzone.disable();
 
+                if (typeof response == 'string') {
+                    $('.dz-preview').hide();
+                    //$('#dropzone label').text(response).show();
+                    alert(response);
+                    reset();
+                    return;
+                }
                 // inject udids
                 response.devices.forEach(function(item) {
                     $('#ipa-devices ul').append($('<li>').text(item));
@@ -78,7 +85,7 @@ $(function() {
 
                 // push state
                 var state = { 'view': response.id };
-                history.pushState(state, 'View ' + response.filename, '?view=' + response.id);
+                history.pushState(state, 'View ' + response.filename, './view.php?p=' + response.id);
 
                 // update fields
                 $('#ipa-url a').attr('href', response.url);
@@ -103,7 +110,7 @@ $(function() {
             $('img.qr').attr('src', '').css('display', 'none');
             myDropzone.enable();
         } else {
-            window.location.href = 'index';
+            window.location.href = './';
         }
     });
 

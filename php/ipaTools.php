@@ -1,4 +1,4 @@
-<?
+<?php
 
 /**
  * Creates a Manifest from any IPA iPhone application file for iOS Wireless App Distribution.
@@ -191,4 +191,6 @@ class IpaTools {
         return $udids[1];
     }
 }
+
+?>
 
