@@ -1,5 +1,12 @@
 AddType  application/octet-stream  .ipa
 AddType  text/xml .plist
 
-DefaultType application/x-httpd-php
+#DefaultType application/x-httpd-php
 Options +MultiViews
+
+#<FilesMatch "(index|list|upload|delete)\.php$">
+#    AuthName "Authorization required"
+#    AuthType Basic
+#    AuthUserFile /path-to/.htpasswd
+#    Require valid-user
+#</FilesMatch>
