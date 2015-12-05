@@ -14,4 +14,4 @@ if (!empty($_GET['id'])) {
 
 }
 
-header('Location: ' . 'list.php');
+header('Location:' . dirname($_SERVER['HTTP_REFERER']));
