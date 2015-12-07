@@ -2,3 +2,4 @@
 /files/*
 /.project
 /.buildpath
+/.htpasswd
